@@ -16,6 +16,7 @@ public class StudentController {
         return "index";
     }
     @GetMapping("/home")
+
     public String getHomePage(Model model){
         StudentEntity studentEntity =new StudentEntity();
         studentEntity.setName("Baski Kumar");
@@ -23,15 +24,39 @@ public class StudentController {
         model.addAttribute("mystud",studentEntity);
         return "home";
     }
+
     @GetMapping("/contact")
     public String getContactPage(Model model){
         model.addAttribute("EID",1002);
         return "contact";
     }
+
     @ResponseBody
     @GetMapping("/emp/{eid}")
     public String emp(@PathVariable("eid") int eid){
      return "Your emp id is : "+eid;
     }
+
+    @ResponseBody
+    @GetMapping("/emp")
+    public String empSearch(@PathVariable("empId") int eid){
+        return "Your emp id is : "+eid;
+    }
+
+    @GetMapping("/msg")
+    public String msgVar(){
+        return "msg-var";
+    }
+
+    @GetMapping("/condition")
+    public String getConditional(Model model){
+        StudentEntity studentEntity1=new StudentEntity();
+        studentEntity1.setName("Baski Kumar saw");
+        studentEntity1.setMobile("7488162756");
+        studentEntity1.setSalary(10000);
+        model.addAttribute("studobj",studentEntity1);
+        return "conditional";
+    }
+
 
 }

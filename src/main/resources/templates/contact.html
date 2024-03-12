@@ -8,7 +8,10 @@
     <h1>Link URL</h1>
     <h4 th:text="${EID}"></h4>
     <a href="#" th:href="@{/home}">Home</a><br>
+<!--    PathVariable/PathParam-->
     <a href=""th:href="@{/emp/101}">Get Employee-1</a><br>
-    <a href=""th:href="@{/emp/{empid}(empid=${EID})}">Get Employee-2</a>
+    <a href=""th:href="@{/emp/{empid}(empid=${EID})}">Get Employee-2</a><br>
+<!--    QueryString-->
+    <a href=""th:href="@{/emp/{empid}(empid=${EID})}">Get Employee-3</a>
 </body>
 </html>

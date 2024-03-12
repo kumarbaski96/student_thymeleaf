@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Welcome to conditional page.</h1>
+<h3>Simple Variable</h3>
+
+<h3>If-Then</h3>
+    <div th:text="${studobj.salary>5000} ? 'Great'"> </div>
+<h3>If-Then-Else</h3>
+    <div th:text="${studobj.salary>15000} ? 'Grete' : 'Fine'"> </div>
+</body>
+</html>
