@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Variable Expression</title>
+</head>
+<body>
+<h1>Switch  Statement</h1>
+    <div th:switch="${studentEntity2.name}">
+        <p th:case="Baijnath">Hello Baijnath</p>
+        <p th:case="Baski">Hello Baski</p>
+        <p th:case="Manoj">Hello Manoj</p>
+        <p th:case="Banku">Hello Banku</p>
+        <p th:case="Trisha">Hello Trisha</p>
+        <p th:case="*">default Case</p>
+
+
+
+
+    </div>
+</body>
+</html>

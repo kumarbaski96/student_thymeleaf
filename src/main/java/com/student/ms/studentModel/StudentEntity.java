@@ -3,10 +3,10 @@ package com.student.ms.studentModel;
 import jakarta.persistence.Entity;
 
 @Entity
-
 public class StudentEntity {
     private String name;
     private String mobile;
+    private double salary;
 
     public String getName() {
         return name;
@@ -24,9 +24,21 @@ public class StudentEntity {
         this.mobile = mobile;
     }
 
-    public StudentEntity(String name, String mobile) {
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public StudentEntity(String name, String mobile, double salary) {
         this.name = name;
         this.mobile = mobile;
+        this.salary = salary;
+    }
+
+    public StudentEntity() {
     }
 
     @Override
@@ -34,9 +46,7 @@ public class StudentEntity {
         return "StudentEntity{" +
                 "name='" + name + '\'' +
                 ", mobile='" + mobile + '\'' +
+                ", salary=" + salary +
                 '}';
-    }
-
-    public StudentEntity() {
     }
 }
