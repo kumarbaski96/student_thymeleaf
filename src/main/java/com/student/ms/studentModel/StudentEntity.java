@@ -16,6 +16,9 @@ public class StudentEntity {
     private String mobile;
     private double salary;
 
+    public StudentEntity(String baski, String number, int i) {
+    }
+
     public int getId() {
         return Id;
     }
