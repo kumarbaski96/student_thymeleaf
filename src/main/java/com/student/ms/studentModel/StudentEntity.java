@@ -16,8 +16,7 @@ public class StudentEntity {
     private String mobile;
     private double salary;
 
-    public StudentEntity(String baski, String number, int i) {
-    }
+
 
     public int getId() {
         return Id;
@@ -54,12 +53,13 @@ public class StudentEntity {
     public StudentEntity() {
     }
 
-    public StudentEntity(int id, String name, String mobile, double salary) {
+    public StudentEntity( int id,String name, String mobile, double salary) {
         Id = id;
         this.name = name;
         this.mobile = mobile;
         this.salary = salary;
     }
+
 
     @Override
     public String toString() {

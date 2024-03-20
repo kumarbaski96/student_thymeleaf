@@ -22,8 +22,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="stud,it : ${studList}">
-            <td scope="row" th:text="${it.index+1}">1</td>
+        <div th:text="${studList}"></div>
+        <tr th:each="stud : ${studList}">
+            <td scope="row" th:text="${stud.id}">1</td>
             <td th:text="${stud.name}">Mark</td>
             <td th:text="${stud.mobile}">Otto</td>
             <td th:text="${stud.salary}">@mdo</td>

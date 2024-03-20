@@ -1,15 +1,10 @@
 package com.student.ms.studenController;
-
 import com.student.ms.studentModel.StudentEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -74,9 +69,9 @@ public class StudentController {
     @GetMapping("/looping")
     public String getLooping(Model model) {
         List<StudentEntity> studList = Arrays.asList(
-                new StudentEntity("Baski", "7488162756", 590),
-                new StudentEntity("manoj", "9867543343", 550),
-                new StudentEntity("Baijnath", "5566779956", 560)
+                new StudentEntity(1,"baski","7488162756",590 ),
+                new StudentEntity(2,"manoj", "9867543343", 550),
+                new StudentEntity(3,"Baijnath", "5566779956", 560)
 
         );
 
